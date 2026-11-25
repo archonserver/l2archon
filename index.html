@@ -13,54 +13,56 @@
     }
     body {
       min-height: 100vh;
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
       background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
       color: #f8fafc;
-      padding: 20px;
       text-align: center;
     }
     .card {
-      max-width: 580px;
       width: 100%;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 20px;
-      padding: 44px 32px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 48px 32px;
     }
     .domain {
       display: inline-block;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       font-weight: 600;
       letter-spacing: 1px;
       color: #38bdf8;
       background: rgba(56, 189, 248, 0.12);
-      padding: 6px 16px;
+      padding: 8px 20px;
       border-radius: 999px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
     h1 {
-      font-size: 2.1rem;
+      font-size: 2.6rem;
       font-weight: 700;
       line-height: 1.25;
-      margin-bottom: 14px;
+      margin-bottom: 16px;
       color: #ffffff;
     }
     p.subtitle {
-      font-size: 1.02rem;
+      font-size: 1.12rem;
       line-height: 1.6;
       color: #cbd5e1;
-      margin-bottom: 24px;
+      max-width: 680px;
+      margin-bottom: 30px;
     }
     .specs {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      margin-bottom: 28px;
-      font-size: 0.98rem;
+      gap: 12px;
+      margin-bottom: 32px;
+      font-size: 1.05rem;
       color: #e2e8f0;
     }
     .discord-btn {
@@ -71,11 +73,11 @@
       background-color: #5865F2;
       color: #ffffff;
       text-decoration: none;
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
-      padding: 13px 28px;
+      padding: 15px 34px;
       border-radius: 12px;
-      margin-bottom: 28px;
+      margin-bottom: 32px;
       transition: background-color 0.2s ease, transform 0.2s ease;
       box-shadow: 0 8px 20px rgba(88, 101, 242, 0.35);
     }
@@ -93,27 +95,27 @@
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-width: 340px;
-      margin: 0 auto;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      width: 100%;
+      max-width: 380px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
     }
     .status-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: rgba(255, 255, 255, 0.03);
-      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.04);
+      padding: 10px 16px;
       border-radius: 10px;
       border: 1px solid rgba(255, 255, 255, 0.08);
     }
     .status-label {
-      font-size: 1rem;
+      font-size: 1.05rem;
       font-weight: 600;
       color: #e2e8f0;
     }
     .status-box {
-      min-width: 88px;
+      min-width: 92px;
       padding: 8px 16px;
       font-size: 1rem;
       font-weight: 700;
@@ -156,7 +158,6 @@
       <span>Join our Discord</span>
     </a>
 
-    <!-- Statusi i serverit: ndrysho status-off ne status-on dhe tekstin OFF ne ON -->
     <div class="server-status">
       <div class="status-row">
         <span class="status-label">Login-server</span>
