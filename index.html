@@ -90,7 +90,6 @@
       height: 22px;
       fill: currentColor;
     }
-    /* Kutite e statusit Login-server & Game-Server */
     .server-status {
       display: flex;
       flex-direction: column;
@@ -123,14 +122,15 @@
       border-radius: 6px;
       text-align: center;
       letter-spacing: 0.5px;
+      transition: background-color 0.2s ease;
     }
     .status-on {
       background-color: #00a65a;
-      box-shadow: 0 0 12px rgba(0, 166, 90, 0.4);
+      box-shadow: 0 0 12px rgba(0, 166, 90, 0.45);
     }
     .status-off {
       background-color: #dd4b39;
-      box-shadow: 0 0 12px rgba(221, 75, 57, 0.4);
+      box-shadow: 0 0 12px rgba(221, 75, 57, 0.45);
     }
   </style>
 </head>
@@ -158,16 +158,28 @@
       <span>Join our Discord</span>
     </a>
 
+    <!-- Shkruaj vetem ON ose OFF me poshte; ngjyra ndryshon automatikisht -->
     <div class="server-status">
       <div class="status-row">
         <span class="status-label">Login-server</span>
-        <div class="status-box status-off">ON</div>
+        <div class="status-box">ON</div>
       </div>
       <div class="status-row">
         <span class="status-label">Game-Server</span>
-        <div class="status-box status-off">ON</div>
+        <div class="status-box">ON</div>
       </div>
     </div>
   </div>
+
+  <script>
+    document.querySelectorAll('.status-box').forEach(box => {
+      const text = box.textContent.trim().toUpperCase();
+      if (text === 'ON') {
+        box.classList.add('status-on');
+      } else {
+        box.classList.add('status-off');
+      }
+    });
+  </script>
 </body>
 </html>
