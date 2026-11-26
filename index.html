@@ -180,24 +180,24 @@
       background-color: #dd4b39;
       box-shadow: 0 0 12px rgba(221, 75, 57, 0.45);
     }
-       .archon-watermark {
+        .archon-watermark {
     position: fixed;
-    top: 4%;
-    right: 6%;
-    width: 650px;
-    max-width: 90vw;
-    opacity: 0.45;
+    top: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 920px;
+    max-width: 95vw;
+    opacity: 0.40;
     z-index: 1;
     pointer-events: none;
-    -webkit-mask-image: radial-gradient(ellipse 75% 70% at 50% 50%, black 35%, transparent 95%);
-    mask-image: radial-gradient(ellipse 75% 70% at 50% 50%, black 35%, transparent 95%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, black 20%, transparent 78%);
+    mask-image: radial-gradient(ellipse 60% 55% at 50% 50%, black 20%, transparent 78%);
   }
 
   @media (max-width: 900px) {
     .archon-watermark {
-      width: 92vw;
-      right: 4%;
-      top: 2%;
+      width: 98vw;
+      top: 4%;
       opacity: 0.30;
     }
   }
